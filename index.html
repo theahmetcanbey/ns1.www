@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="reset.min.css" rel="stylesheet"/>
+		<link href="style.css" rel="stylesheet"/>
+		<script src="vue.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper" id="direct">
+			<div class="container">
+				<div class="left">
+					<div class="top">
+						<input placeholder="Search" type="text"/>
+					</div>
+					<ul class="people">
+						<li class="person" v-for="user in users">
+							<img v-attr="src: user.img" />
+							<span class="name" v-html="user.name"></span>
+							<span class="time" v-html="user.time"></span>
+							<span class="preview" v-html="user.preview"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="top">
+						<span>
+							<span class="name" v-html="selectedUser.name"></span>
+						</span>
+					</div>
+					<div class="chat" data-chat="person1">
+						<div class="conversation-start">
+							<span>
+								Today, 3:38 AM
+							</span>
+						</div>
+						<div class="bubble you">
+							Hey human!
+						</div>
+						<div class="bubble you">
+							Umm... Someone took a shit in the hallway.
+						</div>
+						<div class="bubble me">
+							... what.
+						</div>
+						<div class="bubble me">
+							Are you serious?
+						</div>
+						<div class="bubble you">
+							I mean...
+						</div>
+						<div class="bubble you">
+							It’s not that bad...
+						</div>
+						<div class="bubble you">
+							But we’re probably gonna need a new carpet.
+						</div>
+					</div>
+					<div class="write">
+						<a class="write-link attach" href="javascript:;"></a>
+						<input type="text" />
+						<a class="write-link smiley" href="javascript:;"></a>
+						<a class="write-link send" href="javascript:;"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
