@@ -4,8 +4,9 @@
 		<meta charset="utf-8"/>
 		<link href="reset.min.css" rel="stylesheet"/>
 		<link href="style.css" rel="stylesheet"/>
-		<script src="lodash.min.js"></script>
+		<script src="data.js"></script>
 		<script src="date.js"></script>
+		<script src="lodash.min.js"></script>
 		<script src="vue.min.js"></script>
 	</head>
 	<body>
@@ -20,7 +21,7 @@
 							class="user"
 							v-for="user in users"
 							:class="{'active': selectedUser.id == user.id}"
-							@click="selectedUser = user"
+							@click="changeUser(user);"
 						>
 							<img v-bind:src="user.img" />
 							<span class="name" v-html="user.name"></span>
@@ -47,6 +48,11 @@
 							<small v-html="chat.time"></small>
 							<span v-html="chat.message"></span>
 						</div>
+						<!--<div class="conversation-start">-->
+						<!--	<span>-->
+						<!--		Cont.-->
+						<!--	</span>-->
+						<!--</div>-->
 					</div>
 					<div class="write">
 						<a class="write-link attach" href="javascript:;"></a>
