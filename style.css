@@ -153,7 +153,7 @@ body {
   background: transparent;
 }
 .container .left .people .user.active:after, .container .left .people .user:hover:after {
-  display: none;
+  /*display: none;*/
 }
 .container .right {
   position: relative;
@@ -178,7 +178,7 @@ body {
 }
 .container .right .chat {
   position: relative;
-  display: none;
+  /*display: none;*/
   overflow: hidden;
   padding: 0 35px 92px;
   border-width: 1px 1px 1px 0;
