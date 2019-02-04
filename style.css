@@ -235,6 +235,15 @@ body {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
+.bubble small{
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  padding: 4px;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 4px;
+  color: #fff;
+}
 .container .right .write {
   position: absolute;
   bottom: 29px;
