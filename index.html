@@ -5,6 +5,7 @@
 		<link href="reset.min.css" rel="stylesheet"/>
 		<link href="style.css" rel="stylesheet"/>
 		<script src="vue.min.js"></script>
+		<script src="lodash.min.js"></script>
 	</head>
 	<body>
 		<div class="wrapper" id="direct">
@@ -14,7 +15,12 @@
 						<input placeholder="Search" type="text"/>
 					</div>
 					<ul class="people">
-						<li class="person" v-for="user in users">
+						<li
+							class="user"
+							v-for="user in users"
+							:class="{'active': selectedUser.id == user.id}"
+							@click="selectUser(user)"
+						>
 							<img v-bind:src="user.img" />
 							<span class="name" v-html="user.name"></span>
 							<span class="time" v-html="user.time"></span>
@@ -28,7 +34,7 @@
 							<span class="name" v-html="selectedUser.name"></span>
 						</span>
 					</div>
-					<div class="chat" data-chat="person1">
+					<div class="chat" :class="{'active-chat': selectedUser.id == '2'}">
 						<div class="conversation-start">
 							<span>
 								Today, 3:38 AM
