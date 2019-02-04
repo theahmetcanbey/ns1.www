@@ -15,7 +15,7 @@
 					</div>
 					<ul class="people">
 						<li class="person" v-for="user in users">
-							<img v-attr="src: user.img" />
+							<img v-bind:src="user.img" />
 							<span class="name" v-html="user.name"></span>
 							<span class="time" v-html="user.time"></span>
 							<span class="preview" v-html="user.preview"></span>

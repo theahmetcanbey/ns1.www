@@ -8,14 +8,21 @@ direct = new Vue({
 				"name": "Ahmet",
 				"time": "22:30",
 				"preview": "son mesaj"
+			},
+			{
+				"id": "2",
+				"img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg",
+				"name": "Mehmet",
+				"time": "22:30",
+				"preview": "son mesaj 2"
 			}
 		],
 		selectedUser: "1"
 	}
 });
 
-// document.querySelector('.chat[data-chat=person1]').classList.add('active-chat');
-// document.querySelector('.person[data-chat=person1]').classList.add('active');
+document.querySelector('.chat[data-chat=person1]').classList.add('active-chat');
+document.querySelector('.person[data-chat=person1]').classList.add('active');
 var friends = {
 		list: document.querySelector('ul.people'),
 		all: document.querySelectorAll('.left .person'),
