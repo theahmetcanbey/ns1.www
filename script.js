@@ -23,6 +23,7 @@ direct = new Vue({
 
 document.querySelector('.chat[data-chat=person1]').classList.add('active-chat');
 document.querySelector('.person[data-chat=person1]').classList.add('active');
+
 var friends = {
 		list: document.querySelector('ul.people'),
 		all: document.querySelectorAll('.left .person'),
