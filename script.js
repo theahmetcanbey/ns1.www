@@ -1,9 +1,12 @@
-direct = new Vue({
+window.direct = new Vue({
 	el: "#direct",
 	data: {
-		"me": _me,
-		"allMessages": _allMessages,
-		selectedUser: _emptyUser
+		"l": {},
+		"me": {},
+		"_users": [],
+		"allMessages": [],
+		"selectedUser": {},
+		"search": ""
 	},
 	methods: {
 		changeUser: function(user){
@@ -18,7 +21,9 @@ direct = new Vue({
 		users: {
 			cache: false,
 			get: function() {
-				return _users;
+				return _.filter(direct._users, function(o){
+					return typeof o.name != "undefined" && o.name.toLowerCase().indexOf(direct.search.toLowerCase()) > -1;
+				});
 			}
 		},
 		chats: {
@@ -31,5 +36,12 @@ direct = new Vue({
 		}
 	}
 });
-
-direct.selectedUser = direct.users[0];
+	
+window.addEventListener("load", function(event) {
+	direct.l = _lang;
+	direct.me = _me;
+	direct._users = _users;
+	direct.allMessages = _allMessages;
+	direct.selectedUser = _emptyUser;
+	direct.selectedUser = direct.users[0];
+});

@@ -1,16 +1,16 @@
-_emptyUser = {
-	"id": "0",
-	"img": "0",
-	"name": "0",
-	"time": "0",
-	"preview": "0"
+window._emptyUser = {
+	"id": "",
+	"img": "",
+	"name": "",
+	"time": "",
+	"preview": ""
 };
-_me = {
+window._me = {
 	"id": "1",
 	"img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg",
 	"name": "Ahmet Can",
 };
-_users = [
+window._users = [
 	{
 		"id": "2",
 		"img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg",
@@ -89,7 +89,7 @@ _users = [
 		"preview": "son mesaj 2"
 	}
 ];
-_allMessages = [
+window._allMessages = [
 	{
 		"from":"2",
 		"to":"1",

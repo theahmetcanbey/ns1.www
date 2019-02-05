@@ -5,12 +5,12 @@
 :root {
   --white: #fff;
   --black: #000;
-  --bg: #223344;
+  --bg: #334455;
   --grey: #999;
   --dark: #1a1a1a;
   --light: #e6e6e6;
   --wrapper: 1000px;
-  --blue: #112233;
+  --blue: #223344;
 }
 
 body {
@@ -87,6 +87,9 @@ body {
   border-right: 1px solid var(--light);
   border-left: 1px solid var(--light);
   width: calc(100% + 2px);
+  height: calc(100% - 95px);
+  overflow: hidden;
+  overflow-y: auto;
 }
 .container .left .people .user {
   position: relative;
@@ -95,18 +98,18 @@ body {
   cursor: pointer;
   background-color: var(--white);
 }
-.container .left .people .user:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  display: block;
-  width: 80%;
-  height: 1px;
-  content: '';
-  background-color: var(--light);
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
+/*.container .left .people .user:after {*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  left: 50%;*/
+/*  display: block;*/
+/*  width: 80%;*/
+/*  height: 1px;*/
+/*  content: '';*/
+/*  background-color: var(--light);*/
+/*  -webkit-transform: translate(-50%, 0);*/
+/*          transform: translate(-50%, 0);*/
+/*}*/
 .container .left .people .user img {
   float: left;
   width: 40px;
