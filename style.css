@@ -87,7 +87,7 @@ body {
 	border-right: 1px solid var(--light);
 	border-left: 1px solid var(--light);
 	width: calc(100% + 2px);
-	height: calc(100% - 97px);
+	height: calc(100% - 72px);
 	overflow: hidden;
 	overflow-y: auto;
 }
